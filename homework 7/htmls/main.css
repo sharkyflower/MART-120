@@ -1,0 +1,98 @@
+body {
+    background-color:black;
+    color:white;
+
+}
+
+.italized{
+    color:violet;
+}
+
+.titlePage{
+    animation: vaporwave 15s infinite;
+}
+
+#home{
+    color:rgba(214, 33, 217, 0.799);
+    text-decoration: none;
+}
+
+#home:hover{
+    color:rgb(188, 63, 255);
+    text-decoration: underline;
+}
+
+#contact{
+    color:palevioletred;
+    text-decoration: none;
+}
+
+#contact:hover{
+    color:rgb(255, 78, 137);
+    text-decoration:underline;
+}
+
+#wired{
+    color:hsla(228, 100%, 50%, 0.889);
+    text-decoration: none;
+}
+
+#wired:hover{
+    color:hsl(215, 100%, 50%);
+    text-decoration:underline;
+}
+
+.linkColor{
+    color:crimson;
+    text-decoration: none;
+}
+
+.linkColor:hover{
+    color:darkred;
+    text-decoration:underline;
+
+}
+
+
+@keyframes vaporwave{
+    0%{color: #ff6ad5;}	
+  10%{color: #c774e8;}	
+	20%{color: #ad8cff;}
+  30%{color: #8795e8}
+	40%{color: #94d0ff;}
+  50%{color: #10d7ae;}
+	60%{color: #94d0ff;}
+  70%{color: #8795e8;}
+  80%{color: #ad8cff;}
+  90%{color: #c774e9;}
+	100%{color: #ff6ad5;}
+}
+
+@keyframes lainText{
+    0%{font-family: "JHMTypewriter-Black";}
+    10%{font-family: "JHMTypewriter-Bold";}
+    20%{font-family: "JHMTypewriter-Black";}
+    30%{font-family: "JHMTypewriter-Bold";}
+    40%{font-family: "JHMTypewriter-Black";}
+    50%{font-family: "JHMTypewriter-Bold";}
+    60%{font-family: "JHMTypewriter-Black";}
+    70%{font-family: "JHMTypewriter-Bold";}
+    80%{font-family: "JHMTypewriter-Black";}
+    90%{font-family: "JHMTypewriter-Bold";}
+    100%{font-family: "JHMTypewriter-Black";}
+}
+
+@font-face{
+    font-family:momsTypewriter;
+    src:url(Mom«t__.ttf);
+}
+
+@font-face{
+    font-family:JHMTypewriter-Black;
+    src:url(JMHTypewriter-Black.ttf);
+}
+
+@font-face{
+    font-family:JHMTypewriter-Bold;
+    src:url(JMHTypewriter-Bold.ttf);
+}
