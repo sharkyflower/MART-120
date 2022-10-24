@@ -1,0 +1,116 @@
+<html>
+
+<head>
+
+    <title> Your info is safe </title>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+
+    <link href='https://fonts.googleapis.com/css?family=Advent Pro' rel='stylesheet'>
+
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+    <style>
+        body{
+            font-family: 'Advent Pro';font-size: 22px;
+        }
+    </style>
+
+    <script>
+        function checkbox(){
+            var firstName = document.getElementById("firstName").value;
+            var lastName = document.getElementById("lastName").value;
+            var emailAddress = document.getElementById("emailAddress").value;
+            var radioList = checkRadio();
+            var checkIfOneFalse = false;
+
+            if(firstName == ""){
+                document.getElementById("firstName").focus();
+                document.getElementById("firstName").style.backgroundColor = "crimson";
+                document.getElementById("firstName").style.borderBlockColor = "purple";
+                document.getElementById("firstNameMessage").innerHTML = " <-- Fill this out";
+                document.getElementById("firstNameMessage").style.color = "red";
+
+                checkIfOneFalse = true;
+            }
+
+            if(lastName == ""){
+                document.getElementById("lastName").focus();
+                document.getElementById("lastName").style.backgroundColor = "crimson";
+                document.getElementById("lastName").style.borderBlockColor = "purple";
+                document.getElementById("lastNameMessage").innerHTML = " <-- Please fill this out";
+                document.getElementById("lastNameMessage").style.color = "red";
+
+                checkIfOneFalse = true;
+            }
+
+            if(emailAddress == ""){
+                document.getElementById("emailAddress").focus();
+                document.getElementById("emailAddress").style.backgroundColor = "crimson";
+                document.getElementById("emailAddress").style.borderBlockColor = "purple";
+                document.getElementById("emailAddressMessage").innerHTML = " <-- Fill this out, I won't spam your email ;)";
+                document.getElementById("emailAddressMessage").style.color = "red";
+
+                checkIfOneFalse = true;
+            }
+
+            if(radioList == false){
+                window.alert("Rember to check consent [hint: yes]");
+
+                checkIfOneFalse = true;
+            }
+
+            if(checkIfOneFalse){
+                return false;
+            }
+
+        }
+
+        function checkRadio(){
+            if(document.querySelectorAll('input[type="radio"]:checked').length===0){
+                return false;
+            }
+            else{return true;}
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <h1 class="titlePage">You are now in the contact us page</h1>
+    <h2 class="titlePage">...you have been here as long as you can remember...</h2>
+
+    <br />
+
+    <h3>Give me your information so I can contact you</h3>
+    <p></p>
+    <form action="">
+        <p>First Name: <input type="text" id="firstName" class="form-inline" placeholder="First Name"><span id="firstNameMessage"></span></p>
+        <p>Last Name: <input type="text" id="lastName" class="form-inline" placeholder="Last Name"><span id="lastNameMessage"></span></p>
+        <p></p>
+        <br />
+        <p>Email Address: <input type="text" id="emailAddress" class="form-inline" placeholder="Email"><span id="emailAddressMessage"></span></p>
+        <br />
+        <p>Do you consent?</p>
+        <input type="radio" name="consent" value="Yes" class="form-check-input"> Yes
+        <input type="radio" name="consent" value="No" class="form-check-input"> No
+
+        <p></p>
+
+        <br />
+        
+        <button type="button" id="buttonSubmit" class="btn btn-outline-light" onclick="checkbox();">Submit info</button>
+    </form>
+
+    <br />
+
+    <p><a href="homepage.html" id="home">Back to homepage</a></p>
+    <p><a href="page2.html" id="wired">Destination: Wired</a></p>
+
+</body>
+
+</html>
