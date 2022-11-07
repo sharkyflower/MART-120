@@ -169,9 +169,9 @@ function draw()
     }
 
     textSize(20);
-    //text("Press spacebar... ;)", 50, 500);
-    text("X: " + mouseX,50,500 );
-    text("Y: " + mouseY,50,520 );
+    text("Press spacebar... ;)", 50, 500);
+    //text("X: " + mouseX,50,500 );
+    //text("Y: " + mouseY,50,520 );
 } 
 
 document.addEventListener("keyup",event => {
